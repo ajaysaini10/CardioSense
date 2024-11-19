@@ -1,0 +1,265 @@
+/* src/components/HeartForm.css */
+
+/* Import Google Fonts at the top */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Inter:wght@400;600&display=swap');
+
+/* CSS Variables */
+:root {
+  --primary-bg-color: #dd9a94;
+  --secondary-bg-color: #807182;
+  --font-color: rgba(0, 0, 0, 0.8);
+  --font-family: 'Montserrat', sans-serif;
+  --form-border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background: #D8AA96; /* Updated background color */
+  color: var(--font-color);
+  display: grid;
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 300;
+  height: 100vh;
+  justify-items: center;
+  width: 100vw; /* Corrected 'weight' to 'width' */
+}
+
+.App {
+  text-align: center;
+}
+
+.signup-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  max-width: 900px;
+  margin: 20px auto;
+  background: #f9c7c1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.left-container {
+  background: var(--secondary-bg-color);
+  position: relative;
+  text-align: center;
+  padding: 40px 0;
+  color: var(--font-color);
+}
+
+.left-container h1 {
+  color: var(--font-color);
+  font-size: 35px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.left-container h1 i {
+  background: var(--primary-bg-color);
+  border-radius: 50%;
+  color: var(--secondary-bg-color);
+  font-size: 24px;
+  margin-right: 5px;
+  padding: 10px;
+  transform: rotate(-45deg);
+}
+
+.image-container {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.image-container:before {
+  content: "";
+  background: var(--secondary-bg-color);
+  opacity: 0.4;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.image-container img {
+  filter: sepia(100%);
+  width: 70%;
+  position: relative;
+  z-index: 2;
+}
+
+.right-container {
+  background: lighten(var(--primary-bg-color), 5%);
+  padding: 40px;
+}
+
+.right-container header h1 {
+  color: var(--font-color);
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.form-container {
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.form-container .set {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  width: 48%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--font-color);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 5px;
+  color: var(--font-color);
+  background-color: #fff; /* Ensures input and select backgrounds are white */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--primary-bg-color);
+  outline: none;
+}
+
+.radio-container {
+  background: #fff;
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+  display: flex;
+  padding: 5px;
+}
+
+.radio-container label {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  margin: 0 5px;
+  padding: 0 10px;
+  text-align: center;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+  color: var(--font-color);
+}
+
+.radio-container input[type='radio'] {
+  display: none;
+}
+
+.radio-container input[type='radio']:checked + label {
+  background: var(--primary-bg-color);
+  border: 1px solid var(--form-border-color);
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 20px;
+}
+
+footer .set {
+  display: flex;
+  justify-content: center; /* Center the button */
+  max-width: 600px; /* Match form-container's width */
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    grid-template-columns: 1fr;
+  }
+
+  .left-container {
+    display: none;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+}
+
+/* Styles for the Prediction Button */
+.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Inter', sans-serif; /* Ensure the font is included */
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
